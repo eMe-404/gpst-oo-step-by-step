@@ -1,7 +1,7 @@
 const Person = require('../../main/practice-1/person');
 const Student = require('../../main/practice-1/student');
 const Worker = require('../../main/practice-1/worker');
-
+let person = new Person("Tom", 21);
 describe("Person", () => {
   it("should have field name and age", () => {
     let person = new Person("Tom", 21);
@@ -37,7 +37,7 @@ describe("Person", () => {
 
   });
 
-  describe("Worker", () => {
+  describe("Worker111", () => {
 
     it("should have field name and age", () => {
       let worker = new Worker("Tom", 21);

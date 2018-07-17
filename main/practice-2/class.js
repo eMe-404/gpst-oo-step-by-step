@@ -1,2 +1,14 @@
 // Write your code here
-module.exports = class Class {}
+const student = require('./student');
+
+module.exports = class Class {
+
+    constructor(number) {
+        this.number = number;
+    }
+
+    assignLeader(student) {
+        this.leader = student.name;
+    }
+
+};
