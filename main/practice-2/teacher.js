@@ -9,11 +9,12 @@ module.exports = class Teacher extends Person {
     introduce() {
 
         let s = this.classes.map(v => v.number).join(",");
+        let baseIntroduce = super.introduce();
         if (s !== "") {
-            return "My name is " + this.name + ". I am " + this.age + " years old." +
+            return baseIntroduce +
                 " I am a Teacher. I teach Class " + s + ".";
         } else {
-            return "My name is " + this.name + ". I am " + this.age + " years old." +
+            return baseIntroduce +
                 " I am a Teacher. I teach No Class.";
         }
 

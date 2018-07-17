@@ -7,7 +7,7 @@ module.exports = class Student extends Person{
     }
 
     introduce() {
-        return "My name is " + this.name + ". I am " + this.age + " years old." +
+        return super.introduce() +
             " I am a Student. I am at Class " + this.klass+".";
     }
 };
