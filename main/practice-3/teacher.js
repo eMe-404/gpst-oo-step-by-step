@@ -1,6 +1,4 @@
 const Person = require('./person');
-const Class = require('./class');
-const Student = require('./student');
 
  module.exports = class Teacher extends Person {
     constructor(name, age, clazzes) {
@@ -32,9 +30,12 @@ const Student = require('./student');
         return false;
     }
 
-     addedMember(student) {
-        return "I am "+this.name+". I know "+student.name+
-            " has Joined class"+student.clazz+".";
+      notifyStudentAppended(notification) {
+         return notification;
+     }
+
+      notifyLeaderAssigned(notification) {
+         return notification;
      }
 
 };

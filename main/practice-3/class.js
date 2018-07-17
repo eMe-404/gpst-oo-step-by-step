@@ -1,23 +1,25 @@
 // Write your code here
 const student = require('./student');
-const teacher = require('./teacher');
 
 module.exports = class Class {
 
     constructor(number) {
         this.number = number;
         this.classMember = [];
+        this.teachers = [];
     }
 
     assignLeader(student) {
         this.leader = student.name;
 
+        this.teachers.forEach(t => t.notifyLeaderAssigned(student.name +'become Leader of Class '+this.number));
 
         if (this.hasStudent(student.name)) {
             return "Assign team leader successfully.";
         } else {
             return "It is not one of us."
         }
+
     }
 
     hasStudent(name) {
@@ -27,11 +29,11 @@ module.exports = class Class {
 
     appendMember(student) {
         this.classMember.push(student.name);
-        // teacher.prototype.addedMember(student);
+        // this.teacher.notifyStudentAppended(student);
+        this.teachers.forEach(t => t.notifyStudentAppended(
+            student.name +'has joined Class'+ this.number));
 
     }
-
-
 
 
 };
