@@ -1,7 +1,7 @@
 const Person = require('../../main/practice-1/person');
 const Student = require('../../main/practice-1/student');
 const Worker = require('../../main/practice-1/worker');
-let person = new Person("Tom", 21);
+
 describe("Person", () => {
   it("should have field name and age", () => {
     let person = new Person("Tom", 21);
@@ -45,7 +45,7 @@ describe("Person", () => {
       expect(worker.age).toBe(21);
 
     });
-    
+
     it("should overwrite Person introduce, introduce with class name and job", () => {
       let worker = new Worker("Tom", 21);
       let introduce = worker.introduce();
