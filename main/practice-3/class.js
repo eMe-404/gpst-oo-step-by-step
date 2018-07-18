@@ -12,7 +12,7 @@ module.exports = class Class {
     assignLeader(student) {
         this.leader = student.name;
 
-        this.teachers.forEach(t => t.notifyLeaderAssigned(student.name +'become Leader of Class '+this.number));
+        this.teachers.forEach(t => t.notifyLeaderAssigned(student.name + ' become Leader of Class ' + this.number));
 
         if (this.hasStudent(student.name)) {
             return "Assign team leader successfully.";
@@ -30,8 +30,9 @@ module.exports = class Class {
     appendMember(student) {
         this.classMember.push(student.name);
         // this.teacher.notifyStudentAppended(student);
-        this.teachers.forEach(t => t.notifyStudentAppended(
-            student.name +'has joined Class'+ this.number));
+        this.teachers.forEach(t => {
+            t.notifyStudentAppended(student.name +' has joined Class '+ this.number)
+        });
 
     }
 

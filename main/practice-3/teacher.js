@@ -31,11 +31,11 @@ const Person = require('./person');
     }
 
       notifyStudentAppended(notification) {
-         return notification;
+          console.log(notification);
      }
 
       notifyLeaderAssigned(notification) {
-         return notification;
+          console.log(notification);
      }
 
 };
